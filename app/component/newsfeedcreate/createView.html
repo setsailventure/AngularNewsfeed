@@ -1,0 +1,32 @@
+<!-- create button -->
+<button ng-click="showoption=true"><b>Create</b></button>
+<br>
+<br>
+
+<!-- select event or option for respective form -->
+<div ng-show="showoption===true">
+    <select ng-options="createaction.type for createaction in createactions" ng-model="myactiontype"
+            ng-change="clearform()">
+    </select>
+    <br>
+    <br>
+
+    <!-- event form -->
+    <form ng-show="myactiontype.type==='event'" ng-submit="submit(formdata)">
+        Title:<input type="text" name="title" ng-model="formdata.object.title"><br>
+        Description:<br><textarea type="text" name="description" ng-model="formdata.object.description"></textarea><br>
+        Start:<input type="datetime-local" name="start" ng-model="formdata.object.start"><br>
+        Duration:<input type="number" min="0" name="duration" ng-model="formdata.object.duration"><br><br>
+        <input type="submit" id="submit" value="Submit"/>
+    </form>
+
+    <!--post form -->
+    <form ng-show="myactiontype.type==='post'" ng-submit="submit(formdata)">
+        Title:<input type="text" name="title" ng-model="formdata.object.title"><br>
+        Body:<br><textarea type="text" name="body" ng-model="formdata.object.body"></textarea><br>
+        Create at:<input type="text" name="created_at" ng-model="formdata.object.created_at"><br><br>
+        <input type="submit" id="submit" value="Submit"/>
+    </form>
+
+</div>
+<hr>

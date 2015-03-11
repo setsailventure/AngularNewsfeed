@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="newsfeedapp">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+
+    <!-- Vendor -->
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.8/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.14/angular-route.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.14/angular-resource.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.14/angular-mocks.js"></script>
+    <script src="app/app.js"></script>
+    <script src="app/route.js"></script>
+
+    <!--services -->
+    <script src="app/services/services.js"></script>
+
+    <!--directive -->
+    <script src="app/component/newsfeedbox/boxDirective.js"></script>
+    <script src="app/component/newsfeeditem/itemDirective.js"></script>
+    <script src="app/component/newsfeedcreate/createDirective.js"></script>
+
+    <!--controllers -->
+    <script src="app/component/newsfeedbox/boxController.js"></script>
+    <script src="app/component/newsfeeddetail/eventdetail/eventdetailController.js"></script>
+    <script src="app/component/newsfeeddetail/postdetail/postdetailController.js"></script>
+    <script src="app/component/newsfeeditem/itemController.js"></script>
+    <script src="app/component/newsfeedcreate/createController.js"></script>
+
+    <!--unit testing -->
+    <script src="assets/api/newsfeed/httpbackend.js"></script>
+
+
+</head>
+<body>
+<newsfeed-box></newsfeed-box>
+</body>
+</html>
