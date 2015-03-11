@@ -2,7 +2,9 @@
 By Jovian and Sunny
 
 To Start Application:
+
 index.html
 
-Modify Mock Backend (AngularJS $httpbackend) in
+Mock Backend (AngularJS $httpbackend):
+
 /asset/api/newsfeed/httpbackend.js
